@@ -1,8 +1,10 @@
 let seeds = 0;
 let money = 0;
 let clickCount = 1;
+let clicksPerSeconds = 1;
 
 let addClickPrice = 40;
+let hireWorkersPrice = 150;
 
 function waterPlants(){
     seeds += clickCount
@@ -29,8 +31,12 @@ function addClick(){
 }
 
 function hireWorkers(){
-    setInterval(function() {
-        seeds += 1;
-        document.getElementById('wateredPlants').innerHTML = 'Seeds: ' + seeds;
-      }, 1500);
+    if(money >= hireWorkersPrice){
+        setInterval(function() {
+            seeds += clicksPerSeconds;
+            document.getElementById('wateredPlants').innerHTML = 'Seeds: ' + seeds;
+        }, 1500);
+        document.getElementById('hireWorkersPrice').innerHTML = 'Price: ' + hireWorkersPrice + '$'
+        document.getElementById('seedsPerSeconds').innerHTML = 'Seeds per second: ' + clicksPerSeconds;
+    }
 }
