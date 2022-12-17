@@ -32,6 +32,7 @@ function addClick(){
 
 function hireWorkers(){
     if(money >= hireWorkersPrice){
+        money -= hireWorkersPrice
         setInterval(function() {
             seeds += clicksPerSeconds;
             document.getElementById('wateredPlants').innerHTML = 'Seeds: ' + seeds;
