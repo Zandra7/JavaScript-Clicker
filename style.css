@@ -8,21 +8,69 @@ body {
 }
 
 h1 {
-    margin: 0;
-    padding: 0;
     display: block;
     color: #453B36;
     background-color: #50C78B;
-    padding: 30px 0px;
+    padding: 20px 0px;
     text-align: center;
     box-sizing: content-box;
-}
-
-
-.header1 {
-    position: sticky;
 }
 
 .content {
     margin: 0 20px;
 }
+
+.container {
+    display: block; 
+    margin-top: -1.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-area:" a b c ";
+    background-color: #9ae8c1;
+    color: #453B36;
+}
+
+.seeds {
+    text-align: right;
+}
+
+.money {
+    text-align: center;
+}
+
+.secondseed {
+    text-align: left;
+}
+
+button {
+    /* position: sticky; 
+    top: 15%; */
+    padding: 15px 0;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    padding-right: 0;
+    padding-left: 0;
+}
+  
+button:active {
+    background-color: #387b3b;
+    transform: translateY(4px);
+}
+
+.waterbtn {
+    width: 49.8%;
+    background-color: rgb(78, 149, 204);
+} 
+
+.waterbtn:hover {background-color: rgb(46, 104, 147)}
+
+.seedbtn {
+    width: 49.8%;
+}
+
+.seedbtn:hover {background-color: #3e8e41}
