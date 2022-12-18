@@ -25,14 +25,17 @@ function sellSeeds() {
 }
 
 function addClick() {
-    if (money >= addClickPrice) {
+    if (money >= addClickPrice && addClickPrice < 1000) {
         clickCount += 1
         money -= 30
         document.getElementById('money').innerHTML = 'Money: ' + money + '$'
         addClickPrice *= 2
         document.getElementById('addClickPrice').innerHTML = 'Price: ' + addClickPrice + '$'
-    }
-}
+    } 
+    if (addClickPrice >= 1000) {
+        document.getElementById('workFasterbtn').disabled = true;
+    } 
+  }
 
 function hireWorkers() {
     if (money >= hireWorkersPrice) {
