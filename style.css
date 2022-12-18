@@ -42,19 +42,18 @@ h1 {
     text-align: left;
 }
 
+.container2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 button {
-    /* position: sticky; 
-    top: 15%; */
     padding: 15px 0;
-    font-size: 24px;
     cursor: pointer;
-    text-align: center;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
+    font-size: 16px;
     border: none;
-    padding-right: 0;
-    padding-left: 0;
+    margin: 0;
 }
   
 button:active {
@@ -63,14 +62,17 @@ button:active {
 }
 
 .waterbtn {
-    width: 49.8%;
     background-color: rgb(78, 149, 204);
+    flex: 1;
+    height: 50px;
 } 
 
 .waterbtn:hover {background-color: rgb(46, 104, 147)}
 
 .seedbtn {
-    width: 49.8%;
+    background-color: #4CAF50;
+    display: inline-block;
+    flex: 1;
 }
 
 .seedbtn:hover {background-color: #3e8e41}
