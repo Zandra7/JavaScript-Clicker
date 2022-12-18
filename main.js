@@ -34,11 +34,12 @@ function addClick() {
     } 
     if (addClickPrice >= 1000) {
         document.getElementById('workFasterbtn').disabled = true;
+        document.getElementById('addClickPrice').innerHTML = 'Fully uppgraded'
     } 
   }
 
 function hireWorkers() {
-    if (money >= hireWorkersPrice) {
+    if (money >= hireWorkersPrice && hireWorkersPrice < 4800) {
         money -= hireWorkersPrice
         clicksPerSeconds += 1
         document.getElementById('money').innerHTML = 'Money: ' + money + '$'
@@ -49,6 +50,10 @@ function hireWorkers() {
         hireWorkersPrice *= 2
         document.getElementById('hireWorkersPrice').innerHTML = 'Price: ' + hireWorkersPrice + '$'
         document.getElementById('seedsPerSeconds').innerHTML = 'Seeds per second: ' + clicksPerSeconds;
+    }
+    if (hireWorkersPrice === 4800) {
+        document.getElementById('hireWorkersbtn').disabled = true;
+        document.getElementById('hireWorkersPrice').innerHTML = 'Fully uppgraded'
     }
 }
 
